@@ -1,0 +1,9 @@
+{
+  "name" : "VMware Inc.",
+  "address" : "3401 Hillview Ave",
+  "city" : "Palo Alto",
+  "country" : "USA",
+  "email" : "email@vmware.com",
+  "phone" : "12-34-56-78",
+  "beneficialOwners" : ["Pat Gelsinger"]
+}

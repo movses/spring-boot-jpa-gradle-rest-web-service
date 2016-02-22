@@ -1,0 +1,8 @@
+{
+    "name" : "Example Inc.",
+    "address" : "example address",
+    "city" : "example city",
+    "country" : "example country",
+    "email" : "email@example.com",
+    "beneficialOwners" : ["Arthur Conan Doyle"]
+}
