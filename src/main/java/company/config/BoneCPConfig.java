@@ -1,4 +1,4 @@
-package main.java.company.config;
+package company.config;
 
 /**
  * Created by movses on 2/21/16.

@@ -45,5 +45,5 @@ $ gradle clean build
 ```
 --start web service
 ```sh
-$ java -jar  build/libs/spring-gradle-rest-web-service-0.0.1.jar
+$ java -jar  build/libs/company-web-service-0.0.1.jar
 ```

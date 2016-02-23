@@ -1,23 +1,21 @@
-package main.java.company.service.impl;
+package company.service.impl;
 
 /**
  * Created by movses on 2/19/16.
  */
 
 
-import main.java.company.model.Company;
-import main.java.company.service.exceptions.CompanyNotFoundException;
-import main.java.company.service.interfaces.CompanyRepository;
-import main.java.company.service.interfaces.CompanyService;
-import main.java.company.service.exceptions.InvalidUrlException;
-
+import company.model.Company;
+import company.service.exceptions.CompanyNotFoundException;
+import company.service.interfaces.CompanyRepository;
+import company.service.interfaces.CompanyService;
+import company.service.exceptions.InvalidUrlException;
+import com.google.common.collect.Lists;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import javax.inject.Inject;
@@ -36,17 +34,16 @@ public class CompanyServiceImpl  implements CompanyService {
 
     @Override
     public List<Company> getAll() {
-        List<Company> companies = new ArrayList<Company>();
         Iterable<Company> iterable = repository.findAll();
-        Iterator iter = iterable.iterator();
-        while (iter.hasNext()) {
-            companies.add((Company) iter.next());
+        if (iterable != null) {
+            return Lists.newArrayList(iterable);
+        } else {
+            return new ArrayList<>();
         }
-        return companies;
     }
 
     @Override
-    public Company get(String stringId) {
+    public Company getCompanyDetails(String stringId) {
         Long id;
         try {
             id = Long.parseLong(stringId);
@@ -65,7 +62,7 @@ public class CompanyServiceImpl  implements CompanyService {
     * */
     @Override
     @Transactional
-    public Company save(Company company) {
+    public Company createCompany(Company company) {
         return repository.save(company);
     }
 
@@ -74,7 +71,7 @@ public class CompanyServiceImpl  implements CompanyService {
     * */
     @Override
     @Transactional
-    public Company update(String stringId, Company company) {
+    public Company updateCompany(String stringId, Company company) {
         Long id;
         try {
             id = Long.parseLong(stringId);
@@ -102,7 +99,7 @@ public class CompanyServiceImpl  implements CompanyService {
       * */
     @Override
     @Transactional
-    public Company update(String stringId, List<String> beneficialOwners) {
+    public Company addBeneficialOwner(String stringId, List<String> beneficialOwners) {
         Long id;
         try {
             id = Long.parseLong(stringId);
@@ -112,7 +109,7 @@ public class CompanyServiceImpl  implements CompanyService {
 
         if (repository.exists(id)) {
             Company company = repository.findOne(id);
-            List<String> combinedBeneficialOwners = new ArrayList<String>(company.getBeneficialOwners());
+            List<String> combinedBeneficialOwners = new ArrayList<>(company.getBeneficialOwners());
             combinedBeneficialOwners.addAll(beneficialOwners);
             company.setBeneficialOwners(combinedBeneficialOwners);
             return repository.save(company);

@@ -1,6 +1,6 @@
-package main.java.company.service.interfaces;
+package company.service.interfaces;
 
-import main.java.company.model.Company;
+import company.model.Company;
 
 import java.util.List;
 
@@ -8,9 +8,9 @@ import java.util.List;
  * Created by movses on 2/19/16.
  */
 public interface CompanyService {
-    Company save(Company company);
-    Company get(String name);
+    Company createCompany(Company company);
+    Company getCompanyDetails(String name);
     List<Company> getAll();
-    Company update(String id, List<String> beneficialOwners);
-    Company update(String id, Company company);
+    Company addBeneficialOwner(String id, List<String> beneficialOwners);
+    Company updateCompany(String id, Company company);
 }

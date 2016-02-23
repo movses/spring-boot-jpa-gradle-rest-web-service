@@ -1,4 +1,4 @@
-package main.java.company.service.exceptions;
+package company.service.exceptions;
 
 /**
  * Created by movses on 2/19/16.

@@ -1,4 +1,4 @@
-package main.java.company.controller;
+package company.controller;
 
 /**
  * Created by movses on 2/18/16.
@@ -6,8 +6,8 @@ package main.java.company.controller;
 
 import java.util.List;
 
-import main.java.company.model.Company;
-import main.java.company.service.interfaces.CompanyService;
+import company.model.Company;
+import company.service.interfaces.CompanyService;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -30,29 +30,29 @@ public class CompanyController {
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.GET)
-    public List<Company> getCompanyList() {
+    public List<Company> get() {
         return companyService.getAll();
     }
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.GET)
-    public Company getCompanyDetails(@PathVariable String id) {
-        return companyService.get(id);
+    public Company get(@PathVariable String id) {
+        return companyService.getCompanyDetails(id);
     }
 
     @RequestMapping(value = "/company", method = RequestMethod.POST)
-    public Company createCompany(@RequestBody @Valid final Company company) {
-        return companyService.save(company);
+    public Company post(@RequestBody @Valid final Company company) {
+        return companyService.createCompany(company);
     }
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.PUT)
-    public Company updateCompany(@PathVariable String id, @RequestBody @Valid final Company company) {
-        return companyService.update(id, company);
+    public Company put(@PathVariable String id, @RequestBody @Valid final Company company) {
+        return companyService.updateCompany(id, company);
     }
 
     @RequestMapping(value = "/company/{id}", method = RequestMethod.PATCH)
-    public Company updateCompanyDetails(@PathVariable String id,
+    public Company patch(@PathVariable String id,
                                         @RequestBody List<String> beneficialOwners) {
 
-        return companyService.update(id, beneficialOwners);
+        return companyService.addBeneficialOwner(id, beneficialOwners);
     }
 }

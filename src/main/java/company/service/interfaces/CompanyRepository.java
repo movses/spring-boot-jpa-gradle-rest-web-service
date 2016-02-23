@@ -1,6 +1,6 @@
-package main.java.company.service.interfaces;
+package company.service.interfaces;
 
-import main.java.company.model.Company;
+import company.model.Company;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 
