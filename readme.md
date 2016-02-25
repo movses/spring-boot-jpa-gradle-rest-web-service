@@ -28,18 +28,18 @@ or
 $  curl -H "Accept: application/json" -H "Content-Type: application/json" -X PATCH -d "[\"firstOwnerName\", \"secondOwnerName\"]" ip:port/company/{id}
 ```
 
-@compamy.json is a json template for company: you can use example.json, find more specific samples under src/main/resources/ folder or create one in your own.
+###### @compamy.json is a json template for company: you can use example.json, find more specific samples under src/main/resources/ folder or create one in your own.
 json fields are the following:
 
--Name
--Address
--City
--Country
--Email (not required)
--Phone Number (not required)
--One or more beneficial owner(s)
+- Name
+- Address
+- City
+- Country
+- Email (not required)
+- Phone Number (not required)
+- One or more beneficial owner(s)
 
-@owners.json is a json array containing comma separated list of new beneficial owners
+###### @owners.json is a json array containing comma separated list of new beneficial owners
 
 
 ## building from source code
