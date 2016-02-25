@@ -1,0 +1,142 @@
+.methodsWidget {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: flex-start;
+    justify-content: flex-start;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.methodsWidget .radioButton {
+    -webkit-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+}
+
+.radioButton label,
+.radioButton {
+    cursor: pointer;
+}
+
+.radioButton {
+    margin: 0 10px 0 0;
+}
+
+.actionBar {
+    margin-top: 15px;
+    vertical-align: top;
+}
+
+.actionBar {
+    text-align: right;
+    margin-right: 1em;
+    padding-bottom: 5px;
+}
+
+.actions {}
+
+.actions > * {
+    margin-left: 10px;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+
+.button {
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    background-color: whiteSmoke;
+    background-image: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
+    background-image: linear-gradient(top, whiteSmoke, #F1F1F1);
+    border: 1px solid gainsboro;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    color: #444;
+    cursor: default;
+    font-size: 13px;
+    font-weight: normal;
+    height: 29px;
+    line-height: 27px;
+    margin: 0;
+    min-width: 72px;
+    outline: 0;
+    padding: 0 8px;
+    cursor: pointer;
+}
+
+.button:disabled {
+    color: #B3B3B3 !important;
+    background-image: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1) !important;
+    background-image: linear-gradient(top, whiteSmoke, #F1F1F1) !important;
+    background-color: whiteSmoke !important;
+    -webkit-box-shadow: initial !important;
+    -moz-box-shadow: initial !important;
+    box-shadow: initial !important;
+    border: 1px solid gainsboro !important;
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+}
+
+.button:active,
+.button:hover {
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #F8F8F8;
+    background-image: -webkit-linear-gradient(top, #F8F8F8, #F1F1F1);
+    background-image: linear-gradient(top, #F8F8F8, #F1F1F1);
+    border: 1px solid #C6C6C6;
+    color: #333;
+}
+
+.button:hover {}
+
+.button:active {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+}
+
+.button:focus {
+    border: 1px solid #4D90FE;
+}
+
+.sendButton {
+    background-color: #2196F3;
+    background-image: none;
+    color: white;
+}
+
+.sendButton:hover {
+    background-color: #1976D2;
+    background-image: none;
+    color: white;
+}
+
+.json_input_output_area {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100px;
+    border-radius: 2px;
+}
+
+.url_widget_urlPanel {
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+.requestBody,
+.responseBody {
+    padding-top: 5px;
+}
+
+.url_widget_urlPanel .url_widget_fullWidthRelativeInput {
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 6px;
+}

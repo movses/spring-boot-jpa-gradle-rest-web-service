@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Company Rest Client</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container" ng-app="container" ng-controller="actionController">
+        <div class="url_widget_urlPanel">
+            <input type="text" class="url_widget_fullWidthRelativeInput" ng-model="url" placeholder="URL" >
+        </div>
+        <div class="methodsWidget">
+            <span class="radioButton">
+                <input type="radio" name="method" ng-model="method" value="get" id="get"  ng-change='hideBox()'>
+                <label for="get">GET</label>
+            </span>
+            <span class="radioButton">
+                <input type="radio" name="method" ng-model="method" value="post" id="post" ng-change='showBox()'>
+                <label for="post">POST</label>
+            </span>
+            <span class="radioButton">
+                <input type="radio" name="method" ng-model="method" value="put" id="put" ng-change='showBox()'>
+                <label for="put">PUT</label>
+            </span>
+            <span class="radioButton">
+                <input type="radio" name="method" ng-model="method" value="patch" id="patch" ng-change='showBox()'>
+                <label for="patch">PATCH</label>
+            </span>
+        </div>
+
+        <div class="requestBody" ng-show="show">
+            <textarea class="json_input_output_area" ng-model="requestBody"></textarea>
+        </div>
+        <div class="actionBar">
+            <div class="actions">
+                <button type="button" class="button" ng-click="clear()">Clear</button>
+                <button type="button" class="sendButton button" ng-click="send()" ng-disabled="!url">Send</button>
+            </div>
+        </div>
+        <div class="responseBody" ng-show="responseShow">
+            <textarea class="json_input_output_area" ng-model="responseBody"></textarea>
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
