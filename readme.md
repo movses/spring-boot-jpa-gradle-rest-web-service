@@ -43,13 +43,13 @@ json fields are the following:
 
 
 ## building from source code
-#### Server Side Configuration
+#### Server Side Configuration (v1.x version only)
 - install and start mariadb or mysql
 - create database company_db 
 - create user company_user, set password to 1234 and grant all privileges
 - install tomcat
 
-#### Start Web Service
+#### Start Web Service (v1.x, v2.x versions)
 -- build spring boot application
 ```sh
 $ gradle clean build
