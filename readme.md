@@ -42,6 +42,9 @@ json fields are the following:
 ###### @owners.json is a json array containing comma separated list of new beneficial owners
 
 
+## Heroku deployment
+https://floating-escarpment-88668.herokuapp.com/company
+
 ## building from source code
 #### Server Side Configuration (v1.x version only)
 - install and start mariadb or mysql
